@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "username": "besmir",
+      "password": "admin123",
+      "email": "besmiribr77p@gmail.com",
+      "name": "Besmir Ibrahimi",
+      "role": "admin"
+    },
+    {
+      "username": "student",
+      "password": "student123",
+      "email": "student@universiteti.com",
+      "name": "Student User",
+      "role": "student"
+    },
+    {
+      "username": "albin",
+      "password": "pro123",
+      "email": "a@universiteti.com",
+      "name": "Prof. Dr. User",
+      "role": "professor"
+    }
+  ]
+}

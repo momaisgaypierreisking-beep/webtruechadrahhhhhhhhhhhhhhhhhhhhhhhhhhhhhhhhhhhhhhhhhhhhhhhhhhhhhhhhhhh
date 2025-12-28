@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Kyçje — Universiteti i Vushtrris</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+	<link rel="stylesheet" href="logincss.css">
+</head>
+<body class="bi">
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+			</div>
+			<div class="titull-tekst">
+				<h1>Universiteti i Vushtrris</h1>
+				<div class="nenshkronje">Arsim, Kërkim dhe Zhvillim</div>
+			</div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore">
+			<ul>
+				<li><a href="web1.html">Kryefaqja</a></li>
+				<li><a href="ne.html">Rreth Nesh</a></li>
+				<li><a href="departamentet.html">Departamentet</a></li>
+				<li><a href="hiearkija.html">Hierarkia</a></li>
+				<li><a href="stafi.html">Stafi</a></li>
+				<li><a href="projektet.html">Projektet</a></li>
+				<li><a href="apliko.html">Apliko</a></li>
+				<li><a href="lajmet.html">Lajmet</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="loginpage.html">Kyçja</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="pjesa">
+	<div class="login-container">
+		<div class="login-card">
+			<div class="login-header">
+				<div class="login-logo">🎓</div>
+				<h1>Kyçja në Sistem</h1>
+				<p>Universiteti i Vushtrris</p>
+			</div>
+
+			<div id="errorMessage" class="error-message"></div>
+			<div id="successMessage" class="success-message"></div>
+
+			<form class="login-form" id="loginForm">
+				<div class="form-group">
+					<label for="username">Emri i përdoruesit</label>
+					<input
+						type="text"
+						id="username"
+						name="username"
+						placeholder="Shkruani emrin e përdoruesit"
+						required
+						autocomplete="username">
+				</div>
+
+				<div class="form-group">
+					<label for="password">Fjalëkalimi</label>
+					<input
+						type="password"
+						id="password"
+						name="password"
+						placeholder="Shkruani fjalëkalimin"
+						required
+						autocomplete="current-password">
+				</div>
+
+				<div class="remember-forgot">
+					<label>
+						<input type="checkbox" id="rememberMe" name="rememberMe">
+						<span>Më mbaje mend</span>
+					</label>
+					<a href="forgot.html">Harrova fjalëkalimin?</a>
+				</div>
+
+				<button type="submit" class="login-button">Kyçu</button>
+			</form>
+
+			
+
+			<div class="login-footer">
+				<p>Nuk ke llogari? <a href="apliko.html">Apliko tani</a></p>
+			</div>
+		</div>
+	</div>
+	</main>
+
+	<footer class="footer">
+		<div class="footer-content">
+			<div class="footer-section">
+				<h4>Universiteti i Vushtrris</h4>
+				<p>Institucioni i shërbimit publik i arsimit të lartë dhe kërkimit shkencor.</p>
+			</div>
+			<div class="footer-section">
+				<h4>Linqet e shpejta</h4>
+				<ul>
+					<li><a href="web1.html">Kryefaqja</a></li>
+					<li><a href="ne.html">Rreth nesh</a></li>
+					<li><a href="departamentet.html">Departamentet</a></li>
+					<li><a href="stafi.html">Stafi</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Të tjerë</h4>
+				<ul>
+					<li><a href="projektet.html">Projektet</a></li>
+					<li><a href="apliko.html">Apliko</a></li>
+					<li><a href="lajmet.html">Lajmet</a></li>
+					<li><a href="kontakt.html">Kontakt</a></li>
+				</ul>
+			</div>
+			<div class="footer-section">
+				<h4>Kontakti</h4>
+				<p>📧 info@universiteti.com</p>
+				<p>📞 +383 45 583 000</p>
+				<p>📍 Vushtrri, Kosovë</p>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<p>&copy; 2024 Universiteti i Vushtrris. Të gjitha të drejtat e rezervuara.</p>
+		</div>
+	</footer>
+
+	<script src="login.js"></script>
+	<script src="nav.js"></script>
+</body>
+</html>

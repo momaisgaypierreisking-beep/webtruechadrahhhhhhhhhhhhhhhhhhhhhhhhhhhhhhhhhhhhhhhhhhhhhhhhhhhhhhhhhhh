@@ -1,0 +1,189 @@
+================================================================================
+EVIDENCA E ZHVILIMIT - FAQJA E INTERNETIT UNIVERSITETI I VUSHTRRIS
+================================================================================
+
+DATA E FILLIMIT TË PROJEKTIT: 1 Dhjetor 2025
+PËRDITËSIMI I FUNDIT: 25 Dhjetor 2025
+ZHVILLUESI: Besmir ibrahimi
+STATUSI: Në Zhvillim Aktiv
+----
+================================================================================
+FILLIMI I DHJETORIT - PËRGATITJA FILLESTARE E PROJEKTIT
+================================================================================
+
+Dhjetor 1 - Themeli i Projektit
+  ✓ U krijuan web1.html, kontakt.html
+  ✓ Përgatitja e strukturës bazë të faqes
+  
+Dhjetor 2 - Zgjerimi i Koleksionit të Faqeve
+  ✓ U shtuan lajmet.html, ne.html, pemaeuniveritetit.html
+  ✓ U shtuan projektet.html, stafi.html
+  ✓ U krijua skedari kryesor CSS: style[krejtktu].css
+  ✓ Vendosja e stilit konsistent në të gjitha faqet
+  
+Dhjetor 3 - Rafinimit i CSS dhe Reparimi
+  ✓ Reparimi i formatimit të skedarit CSS
+  ✓ Zgjidhja e problemeve të stilit dhe linjës
+  ✓ Optimizimi i implementimit të stilit indirekt
+  
+Dhjetor 7 - Plotësimi i Skedarëve HTML
+  ✓ Përfundim i të gjithë skedarëve HTML
+  ✓ Shtimin e strukturës së navigimit në të gjitha faqet
+  ✓ Implementimin e header dhe footer në të gjithë sajtin
+
+================================================================================
+DHJETOR 25 - SHTIMIN E KARAKTERISTIKAVE TË MËDHA DHE PËRDITËSIMI I MARKËS
+================================================================================
+
+Sesioni i Mëngjezit - Zhvillimi i Formularit të Aplikimit
+  ✓ Krijim i Formularit Gjithëpërfshirës të Aplikimit të Universitetit (apliko.html)
+  ✓ Implementim i 5 seksioneve kryesore të formularit:
+    - Informacioni Personal (emri, email, telefon, data e lindjes, gjinia, adresa)
+    - Informacioni Akademik (shkolla, GPA, përzgjedhja e programit, gjuhët)
+    - Dokumentacioni (ngarkim skedarësh për diplomën, certifikatat, letrën)
+    - Informacioni Shtesë (ndihma financiare, pranimi i kushteve)
+    - Seksioni i Afatimit të Aplikimit
+  ✓ Shtim i stilit profesional të formularit me:
+    - Seksionet Fieldset me sfondet me gradient
+    - Gjendjet e fokusit të input dhe kalime
+    - Stil i personalizuar i ngarkim skedarëve
+    - Butonat e formularit me efekte hover
+    - Planin responsiv për mobile dhe desktop
+
+Sesioni i Mesditës - Përditësimet e Markës dhe Reparimi i Navigimit
+  ✓ Ndryshim i emrit të universitetit në të gjithë sajtin:
+    - "Universiteti i Shembullit" → "Universiteti i Vushtrris"
+    - Përditësim i 10 skedarëve HTML (headers dhe footers)
+  ✓ Reparim i linkeve të dublikuara të menusë:
+    - Hequr linkun e dytë "Kryefaqja" nga apliko.html
+    - Pastrimi i linkut konfliktues home.html
+    
+Sesioni i Pasdites - Statusi i Aplikimit dhe Departamentet Interaktive
+  ✓ Shtim i Njoftimit të Mbylljes të Aplikimit:
+    - Mesazhi "Aplikimi është Mbyllur" në krye të formularit
+    - Butoni i dorëzimit të paaftësuar (gjendja vizuale gri)
+    - Ul transparencën e formularit për të treguar gjendjen jo-aktive
+  ✓ Krijim i Faqes Interaktive të Departamenteve:
+    - Ndërtim i 6 kartave të zgjedhshme të departamentit me ikona
+    - Shtimin e listave detajuese të nëndepartamenteve
+    - Departamentet përfshijnë: Informatika, Juridiku, Arkeologjia, Inxhinjeria, 
+                               Shkenca Shoqërore, Mjekësia
+    - Secila me 5 opsione relevant të programit
+
+Sesioni i Vonë i Pasdites - JavaScript dhe Stil i Avancuar
+  ✓ Zhvillim i skedarit departamente.js:
+    - Funksionaliteti i klikimi për ndërrim të departamenteve
+    - Auto-mbyllja e departamenteve të tjera kur hapet njëri i ri
+    - Mbështetja e çelësit ESC për mbylljen
+    - Atributet e duhura të aksesibilitetit ARIA
+  ✓ CSS e Avancuar për departamentet:
+    - Plan responsiv i grid-it (auto-fit, minmax)
+    - Animacione të butë dhe kalime
+    - Efektet hover me hije dhe transform
+    - Butonat e departamentit me ngjyra të koduara me gradient
+    - Animacione e rrotullimit të ikonit chevron
+    - Treguesit e shigjetës në nëndepartamente
+  ✓ Vendosja e departamenteve për të qenë të hapura si parazgjedhje:
+    - Ndryshim aria-expanded="true" në të gjithë butonat
+    - Hequr atributet "hidden"
+    - Përdoruesit shohin të gjithë programet menjëherë
+  ✓ Pastrimi përfundimtar i navigimit në departamentet.html:
+    - Hequr linket e dublikuara "Kryefaqja"
+
+================================================================================
+SKEDARËT E KRIJUAR SOT
+================================================================================
+
+departamente.js
+  - Funksionaliteti interaktiv i ndërrimit të departamenteve
+  - 45 linja JavaScript të pastër dhe me koment
+  - Qasja e bazuar në aksesibilitet
+
+================================================================================
+SKEDARËT E MODIFIKUAR SOT
+================================================================================
+
+apliko.html
+  - Shtim i formularit të plotë të aplikimit (140+ linja)
+  - Reparim i menysë navigimit
+  - Përditësim i emrit të universitetit
+
+style[krejtktu].css
+  - Shtim i stilit të formularit (60+ linja)
+  - Shtim i stilit të departamenteve (40+ linja)
+  - Shtesë totale CSS: 100+ rreshta të rinj
+
+departamentet.html
+  - Shtim i seksionit interaktiv të 6 departamenteve
+  - Implementim i funksionalitetit të hapjes/mbylljes
+  - Reparim i menysë navigimit
+  - Përditësim i emrit të universitetit
+
+Plus: web1.html, home.html, ne.html, stafi.html, projektet.html, 
+      lajmet.html, kontakt.html, pemaeuniveritetit.html
+  - Përditësim i emrit të universitetit në headers dhe footers
+
+================================================================================
+ARRITJE TEKNIKE
+================================================================================
+
+KARAKTERISTIKAT E IMPLEMENTUARA:
+  ✓ Formular responsiv me validim
+  ✓ Seksione të zgjedhshme interaktive të departamenteve
+  ✓ Animacione të butë CSS dhe kalime
+  ✓ Plan responsiv i parë për mobile
+  ✓ Atributet e aksesibilitetit ARIA
+  ✓ Stil profesional me gradient
+  ✓ Input të personalizuar të ngarkim skedarëve
+  ✓ Struktura e pastruar e navigimit
+
+STANDARDET E DIZAJNIT TË MBAJTUR:
+  ✓ Skema e ngjyrës blu dhe e bardhë konsistente
+  ✓ Tipografia profesionale (Inter, Merriweather)
+  ✓ Kalime të butë (kohëzgjatja 0.28s - 0.3s)
+  ✓ Hapësira e duhur dhe padding
+  ✓ Sisteme responsive të grid-it
+  ✓ Gjendjet e fokusit për navigimin me tastet
+
+================================================================================
+STATUSI AKTUAL I FAQES SË INTERNETIT
+================================================================================
+
+✓ Të gjithë 10 faqet kanë markën e përditësuar (Universiteti i Vushtrris)
+✓ Formulari i aplikimit është i plotë dhe funksional (aktualisht mbyllur)
+✓ Faqja e departamenteve interaktive me 6 departamente plotësisht operative
+✓ Menutë e navigimit janë të pastra dhe konsistente
+✓ Faqja e internetit është plotësisht responsive për mobile/tablet/desktop
+✓ Të gjithë stilet janë profesionale dhe të pastruar
+✓ Karakteristikat e aksesibilitetit të implementuara
+
+================================================================================
+SHËNIME DHE KONSIDERATA FUTURE
+================================================================================
+
+Për të Rihapbur Aplikimet:
+  - Hiq atributin "disabled" nga butoni i dorëzimit në apliko.html
+  - Ndryshim i tekstit të njoftimit ose heqje të mesazhit të mbylljes
+  - Heqje e stilit të transparencës të formularit
+
+Mundësitë për Përmirësim:
+  - Shtim i përpunimit të dorëzimit të formularit të backend-it
+  - Krijim i faqeve individuale për secilin departament
+  - Shtim i faqeve të detajit të programit me përshkrime
+  - Implementim i funksionalitetit të kërkimit për departamentet
+  - Shtim i dëshmive të studentëve ose historive të suksesit
+  - Konsiderim i mbështetjes së gjuhës shumë-gjuhësore
+  - Shtim i informacionit të kontaktit në kartën e departamentit
+
+Testimi i Plotësuar:
+  - Navigimi testuar në të gjitha faqet
+  - Stil i formularit i verifikuar në madhësi të ndryshme ekrani
+  - Funksionaliteti i ndërrimit të departamenteve funksional siç duhet
+  - Animacione CSS të butë dhe responsive
+
+================================================================================
+FUNDI I EVIDENCËS - PROJEKTI NË VAZHDIM
+================================================================================
+
+
+Dhjetor 7 - Plotësimi i Skedarëve HTML

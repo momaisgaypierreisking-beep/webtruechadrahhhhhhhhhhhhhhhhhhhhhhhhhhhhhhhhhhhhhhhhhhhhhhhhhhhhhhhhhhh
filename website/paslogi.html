@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Portali i Studentit — Universiteti i Vushtrris</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+	<link rel="stylesheet" href="paslogi.css">
+</head>
+<body class="bi">
+	<!-- Access Blocked Message -->
+	<div id="blockedMessage" class="access-blocked">
+		<div class="blocked-message">
+			<h2>🔒 Qasja e Ndaluar</h2>
+			<p>Ju nuk keni leje për të hyrë në këtë faqe.</p>
+			<p>Ju lutemi, kyçuni në sistem për të aksesuar Portali i Studentit.</p>
+			<a href="loginpage.html">Kthehu në Kyçje</a>
+		</div>
+	</div>
+
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+			</div>
+			<div class="titull-tekst">
+				<h1>Universiteti i Vushtrris</h1>
+				<div class="nenshkronje">Arsim, Kërkim dhe Zhvillim</div>
+			</div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore">
+			<ul>
+				<li><a href="web1.html">Kryefaqja</a></li>
+				<li><a href="ne.html">Rreth Nesh</a></li>
+				<li><a href="departamentet.html">Departamentet</a></li>
+				<li><a href="stafi.html">Stafi</a></li>
+				<li><a href="projektet.html">Projektet</a></li>
+				<li><a href="apliko.html">Apliko</a></li>
+				<li><a href="lajmet.html">Lajmet</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="loginpage.html">Kycu</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="pjesa">
+		<div id="portalContent" style="display: none;">
+			<!-- Welcome Header -->
+			<div class="portal-header">
+				<h1>📚 Portali i Studentit</h1>
+				<p class="user-greeting" id="userGreeting"></p>
+			</div>
+
+			<!-- User Info Section -->
+			<div class="user-info-grid" style="max-width: 1200px; margin: 0 auto 40px;">
+				<div class="info-box">
+					<label>Emri Plotë</label>
+					<div style="color: #333; font-size: 15px;" id="fullName">—</div>
+				</div>
+				<div class="info-box">
+					<label>Emri i Përdoruesit</label>
+					<div style="color: #333; font-size: 15px;" id="userName">—</div>
+				</div>
+				<div class="info-box">
+					<label>Email</label>
+					<div style="color: #333; font-size: 15px;" id="userEmail">—</div>
+				</div>
+				<div class="info-box">
+					<label>Kyçja në</label>
+					<div style="color: #333; font-size: 15px;" id="loginTime">—</div>
+				</div>
+			</div>
+
+			<!-- Portal Grid -->
+			<div class="portal-grid">
+				<!-- Exams/Tests Card -->
+				<div class="portal-card">
+					<div class="card-header">📝 Testet Përpara</div>
+					<div class="card-content">
+						<div class="test-item">
+							<div class="test-course">Algoritmet dhe Strukturat e të Dhënave</div>
+							<div class="test-date">📅 3 Janar 2025 - 10:00</div>
+							<div class="test-location">📍 Salla 305, Ndërtesa B</div>
+							<span class="test-status status-upcoming">Afër</span>
+						</div>
+
+						<div class="test-item">
+							<div class="test-course">Programimi në Java</div>
+							<div class="test-date">📅 5 Janar 2025 - 14:00</div>
+							<div class="test-location">📍 Lab Informatike 2</div>
+							<span class="test-status status-upcoming">Afër</span>
+						</div>
+
+						<div class="test-item">
+							<div class="test-course">Baza të të Dhënave</div>
+							<div class="test-date">📅 8 Janar 2025 - 09:00</div>
+							<div class="test-location">📍 Salla 210, Ndërtesa A</div>
+							<span class="test-status status-upcoming">Afër</span>
+						</div>
+
+						<div class="test-item">
+							<div class="test-course">Rrjetet e Kompjuterëve</div>
+							<div class="test-date">📅 12 Janar 2025 - 11:00</div>
+							<div class="test-location">📍 Salla 401, Ndërtesa C</div>
+							<span class="test-status status-upcoming">Afër</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Grades Card -->
+				<div class="portal-card">
+					<div class="card-header">📊 Notat e Semerit</div>
+					<div class="card-content">
+						<div class="grade-item">
+							<span class="grade-course">Algoritmet dhe Strukturat</span>
+							<span class="grade-value high">8.5</span>
+						</div>
+						<div class="grade-item">
+							<span class="grade-course">Programimi në Java</span>
+							<span class="grade-value high">8.2</span>
+						</div>
+						<div class="grade-item">
+							<span class="grade-course">Baza të të Dhënave</span>
+							<span class="grade-value high">8.7</span>
+						</div>
+						<div class="grade-item">
+							<span class="grade-course">Rrjetet e Kompjuterëve</span>
+							<span class="grade-value medium">7.5</span>
+						</div>
+						<div class="grade-item">
+							<span class="grade-course">Siguria e Informacionit</span>
+							<span class="grade-value high">8.0</span>
+						</div>
+						<div style="padding-top: 12px; border-top: 2px solid #0b63b7; margin-top: 12px; font-weight: 600; color: #063a73; text-align: center;">
+							Mesatarja: <span style="color: #0b63b7;">8.18</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Assignments Card -->
+				<div class="portal-card">
+					<div class="card-header">✅ Detyrat</div>
+					<div class="card-content">
+						<div class="assignment-item">
+							<div class="assignment-title">Projekti: Sistem Menaxhimi Biblioteke</div>
+							<div class="assignment-due">⏰ Afati: 2 Janar 2025</div>
+							<span class="assignment-status submitted">Dorëzuar</span>
+						</div>
+
+						<div class="assignment-item">
+							<div class="assignment-title">Ushtrime praktike SQL</div>
+							<div class="assignment-due">⏰ Afati: 4 Janar 2025</div>
+							<span class="assignment-status pending">Në pritje</span>
+						</div>
+
+						<div class="assignment-item">
+							<div class="assignment-title">Analiza e Sigurimit të Rrjeteve</div>
+							<div class="assignment-due">⏰ Afati: 6 Janar 2025</div>
+							<span class="assignment-status pending">Në pritje</span>
+						</div>
+
+						<div class="assignment-item">
+							<div class="assignment-title">Projekt i Përfundimit të Semestrit</div>
+							<div class="assignment-due">⏰ Afati: 15 Janar 2025</div>
+							<span class="assignment-status pending">Në pritje</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Resources Card -->
+				<div class="portal-card">
+					<div class="card-header">📖 Burimet Akademike</div>
+					<div class="card-content">
+						<div class="resource-item">
+							<span class="resource-icon">📚</span>
+							<a href="#" class="resource-link">Libraria Dixhitale</a>
+						</div>
+						<div class="resource-item">
+							<span class="resource-icon">🎥</span>
+							<a href="#" class="resource-link">Leksione Video - Klas Online</a>
+						</div>
+						<div class="resource-item">
+							<span class="resource-icon">📝</span>
+							<a href="#" class="resource-link">Nën-shënimet e Leksionit</a>
+						</div>
+						<div class="resource-item">
+							<span class="resource-icon">💻</span>
+							<a href="#" class="resource-link">Platforma Programimi Online</a>
+						</div>
+						<div class="resource-item">
+							<span class="resource-icon">📊</span>
+							<a href="#" class="resource-link">Laboratori Virtual</a>
+						</div>
+						<div class="resource-item">
+							<span class="resource-icon">🔗</span>
+							<a href="#" class="resource-link">Përfundimi i Aftësive Donesore</a>
+						</div>
+					</div>
+				</div>
+
+				<!-- Professor Panel (visible only to professors) -->
+				<div id="professorPanel" class="portal-card" style="display: none;">
+					<div class="card-header">🧑‍🏫 Paneli i Profesorit</div>
+					<div class="card-content">
+						<p><strong>Menaxho Provimet & Detyrat</strong></p>
+						<p>Si profesor, mund të shikoni dhe menaxhoni provimet, të vlerësoni punimet dhe të komunikoni me studentët.</p>
+						<ul style="margin-top:12px;">
+							<li><a href="#">Menaxho provimet</a></li>
+							<li><a href="#">Dorëzimet e studentëve</a></li>
+							<li><a href="#">Postoni njoftime për klasën</a></li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- Calendar/Schedule Card -->
+				<div class="portal-card">
+					<div class="card-header">📆 Orari i Semestrit</div>
+					<div class="card-content">
+						<div style="margin-bottom: 15px;">
+							<p><strong>Mësimi:</strong> 30 Dhjetor 2024 - 25 Maj 2025</p>
+							<p><strong>Ekzaminet e Rregullt:</strong> 26 Maj - 30 Qershor 2025</p>
+							<p><strong>Ekzaminet e Rregullit të Dytë:</strong> 1 - 30 Korrik 2025</p>
+							<p><strong>Regjistrimi për Semestrin e Ardhshëm:</strong> 15 - 31 Korrik 2025</p>
+						</div>
+						<p style="background: #f5f9ff; padding: 10px; border-radius: 6px; border-left: 4px solid #0b63b7; margin: 0; font-size: 13px;">
+							🔔 Matura përfundimtare do të zhvillohet në formën e një projekti kapstone të kombinuar me një provim shtesë.
+						</p>
+					</div>
+				</div>
+
+				<!-- Support & Help Card -->
+				<div class="portal-card">
+					<div class="card-header">🤝 Ndihma dhe Mbështetje</div>
+					<div class="card-content">
+						<p><strong>👨‍🏫 Këshilltar Akademik:</strong></p>
+						<p>Prof. Dr. Luiza Krasniqi<br/>
+						📧 l.krasniqi@universiteti.com<br/>
+						🕒 Kohë zyre: E hënë - E premte, 10:00 - 12:00</p>
+
+						<hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+
+						<p><strong>📞 Shërbimi i Nxënësit:</strong></p>
+						<p>☎️ +383 45 583 100<br/>
+						📧 students@universiteti.com<br/>
+						🕒 E hënë - E premte, 09:00 - 16:00</p>
+
+						<hr style="border: none; border-top: 1px solid #eee; margin: 15px 0;">
+
+						<p><strong>💻 Mbështetja Teknike:</strong></p>
+						<p>📧 support@universiteti.com<br/>
+						🕒 24/7 për çështje kritike</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Logout Section -->
+			<div class="logout-section">
+				<button class="logout-btn" onclick="logout()">🚪 Dilni nga Sistemi</button>
+			</div>
+		</div>
+	</main>
+
+
+	<script src="nav.js"></script>
+	<script>
+		// Check if user is logged in on page load
+		document.addEventListener('DOMContentLoaded', () => {
+			const blockedMessage = document.getElementById('blockedMessage');
+			const portalContent = document.getElementById('portalContent');
+
+			// Get user from localStorage or sessionStorage
+			let userInfo = localStorage.getItem('currentUser');
+			if (!userInfo) {
+				userInfo = sessionStorage.getItem('currentUser');
+			}
+
+			if (userInfo) {
+				try {
+					const user = JSON.parse(userInfo);
+
+						// Show portal content
+						portalContent.style.display = 'block';
+						blockedMessage.classList.remove('show');
+
+						// Populate user info
+						document.getElementById('userGreeting').textContent = `Mirë se vini përsëri, ${user.name}!`;
+						document.getElementById('fullName').textContent = user.name;
+						document.getElementById('userName').textContent = user.username;
+						document.getElementById('userEmail').textContent = user.email;
+						document.getElementById('loginTime').textContent = new Date().toLocaleString('sq-AL');
+
+						// Apply role-based UI
+						const role = user.role || 'student';
+						document.body.classList.add(`role-${role}`);
+						if (role === 'professor' || role === 'professor') {
+							const profPanel = document.getElementById('professorPanel');
+							if (profPanel) profPanel.style.display = 'block';
+							// Tweak greeting for professors
+							document.getElementById('userGreeting').textContent += ' — Panel i Profesorit';
+						}
+				} catch (error) {
+					console.error('Error parsing user info:', error);
+					blockedMessage.classList.add('show');
+					portalContent.style.display = 'none';
+				}
+			} else {
+				// Show blocked message
+				blockedMessage.classList.add('show');
+				portalContent.style.display = 'none';
+			}
+		});
+
+		// Logout function
+		function logout() {
+			if (confirm('Jeni i sigurt se doni të dilni nga sistemi?')) {
+				localStorage.removeItem('currentUser');
+				sessionStorage.removeItem('currentUser');
+				window.location.href = 'loginpage.html';
+			}
+		}
+	</script>
+</body>
+</html>

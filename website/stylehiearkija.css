@@ -1,0 +1,379 @@
+/* Hierarchy Page Styling */
+
+.hierarchy-header {
+	text-align: center;
+	padding: 40px 20px;
+	background: linear-gradient(135deg, #0b63b7 0%, #063a73 100%);
+	color: white;
+	margin-bottom: 40px;
+}
+
+.hierarchy-header h2 {
+	font-size: 2.5rem;
+	margin: 0 0 10px 0;
+	font-weight: 700;
+}
+
+.hierarchy-subtitle {
+	font-size: 1.1rem;
+	color: rgba(255, 255, 255, 0.9);
+	margin: 0;
+}
+
+/* Hierarchy Container */
+.hierarchy-container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px 40px 20px;
+}
+
+/* Hierarchy Level */
+.hierarchy-level {
+	margin-bottom: 50px;
+	animation: slideInUp 0.6s ease-out backwards;
+}
+
+.hierarchy-level:nth-child(1) { animation-delay: 0.1s; }
+.hierarchy-level:nth-child(2) { animation-delay: 0.2s; }
+.hierarchy-level:nth-child(3) { animation-delay: 0.3s; }
+.hierarchy-level:nth-child(4) { animation-delay: 0.4s; }
+.hierarchy-level:nth-child(5) { animation-delay: 0.5s; }
+
+.level-title {
+	font-size: 1.4rem;
+	color: #063a73;
+	margin: 0 0 25px 0;
+	padding-bottom: 15px;
+	border-bottom: 3px solid #0b63b7;
+	font-weight: 700;
+	position: relative;
+	display: inline-block;
+}
+
+.level-title::before {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(90deg, #0b63b7, #0f4fb0);
+	border-radius: 2px;
+}
+
+/* Hierarchy Cards Grid */
+.hierarchy-cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 25px;
+}
+
+.hierarchy-card {
+	background: white;
+	border-radius: 12px;
+	padding: 25px;
+	box-shadow: 0 4px 15px rgba(11, 99, 183, 0.1);
+	border: 2px solid transparent;
+	transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+	outline: none;
+	display: flex;
+	flex-direction: column;
+}
+
+.hierarchy-card:hover {
+	border-color: #0b63b7;
+	box-shadow: 0 12px 35px rgba(11, 99, 183, 0.2);
+	transform: translateY(-8px);
+}
+
+.hierarchy-card:focus {
+	border-color: #0f4fb0;
+	outline: 2px solid #0f4fb0;
+	outline-offset: 2px;
+}
+
+.hierarchy-card.support {
+	background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+	border: 2px solid #e6eef9;
+}
+
+.hierarchy-card.support:hover {
+	border-color: #0f4fb0;
+	background: white;
+}
+
+.card-icon {
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 15px;
+	display: inline-block;
+	width: 100%;
+	transition: transform 0.3s ease;
+}
+
+.hierarchy-card:hover .card-icon {
+	transform: scale(1.1);
+}
+
+.hierarchy-card h4 {
+	font-size: 1.2rem;
+	margin: 0 0 8px 0;
+	color: #063a73;
+	font-weight: 700;
+}
+
+.card-name {
+	font-size: 1rem;
+	font-weight: 700;
+	color: #0b63b7;
+	margin-bottom: 12px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #e6eef9;
+	display: inline-block;
+}
+
+.card-role {
+	font-size: 0.85rem;
+	color: #0b63b7;
+	margin: 0 0 10px 0;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+.card-desc {
+	font-size: 0.95rem;
+	color: #555;
+	margin: 0 0 20px 0;
+	line-height: 1.5;
+	flex-grow: 1;
+}
+
+.expand-responsibilities {
+	width: 100%;
+	padding: 12px 20px;
+	background: linear-gradient(135deg, #0b63b7 0%, #0f4fb0 100%);
+	color: white;
+	border: none;
+	border-radius: 8px;
+	font-size: 1rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	margin-bottom: 0;
+	margin-top: auto;
+}
+
+.expand-responsibilities:hover {
+	transform: translateY(-2px);
+	box-shadow: 0 6px 20px rgba(11, 99, 183, 0.3);
+}
+
+.expand-responsibilities:active {
+	transform: translateY(0);
+}
+
+.expand-responsibilities.expanded {
+	background: linear-gradient(135deg, #0f4fb0 0%, #0b63b7 100%);
+}
+
+/* Responsibilities Section */
+.responsibilities {
+	max-height: 0;
+	overflow: hidden;
+	opacity: 0;
+	margin-top: 0;
+	padding-top: 0;
+	border-top: none;
+	transition: max-height 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.4s ease, margin-top 0.4s ease, padding-top 0.4s ease, border-top 0.4s ease;
+	pointer-events: none;
+}
+
+.responsibilities.show {
+	opacity: 1;
+	pointer-events: auto;
+	margin-top: 15px;
+	padding-top: 15px;
+	border-top: 2px solid #f5f7fa;
+}
+
+.responsibilities ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.responsibilities li {
+	padding: 10px 15px;
+	margin: 8px 0;
+	background: #f5f7fa;
+	border-left: 4px solid #0b63b7;
+	border-radius: 6px;
+	transition: all 0.3s ease;
+	animation: slideInRight 0.5s ease-out forwards;
+	opacity: 0;
+}
+
+.responsibilities li:nth-child(1) { animation-delay: 0.05s; }
+.responsibilities li:nth-child(2) { animation-delay: 0.1s; }
+.responsibilities li:nth-child(3) { animation-delay: 0.15s; }
+.responsibilities li:nth-child(4) { animation-delay: 0.2s; }
+.responsibilities li:nth-child(5) { animation-delay: 0.25s; }
+
+.responsibilities li:hover {
+	background: linear-gradient(90deg, #f5f7fa 0%, white 100%);
+	border-left-color: #0f4fb0;
+	transform: translateX(10px);
+	box-shadow: 0 2px 10px rgba(11, 99, 183, 0.1);
+}
+
+/* Animations */
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(30px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInRight {
+	from {
+		opacity: 0;
+		transform: translateX(-15px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+/* Footer Styling */
+.site-footer {
+	background: linear-gradient(135deg, #0b63b7 0%, #063a73 100%);
+	color: white;
+	padding: 40px 20px 20px;
+	margin-top: 40px;
+}
+
+.footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 30px;
+	margin-bottom: 30px;
+}
+
+.footer-section h4 {
+	margin-top: 0;
+	font-size: 1.1rem;
+	margin-bottom: 15px;
+	color: #ffffff;
+}
+
+.footer-section p {
+	margin: 8px 0;
+	opacity: 0.9;
+	font-size: 0.95rem;
+}
+
+.footer-section ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-section ul li {
+	margin: 10px 0;
+}
+
+.footer-section a {
+	color: rgba(255, 255, 255, 0.9);
+	text-decoration: none;
+	transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+	color: #ffffff;
+}
+
+.footer-bottom {
+	text-align: center;
+	padding-top: 20px;
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+	opacity: 0.85;
+	font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+	.hierarchy-header h2 {
+		font-size: 1.8rem;
+	}
+	
+	.hierarchy-cards {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		gap: 20px;
+	}
+	
+	.level-title {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.hierarchy-header {
+		padding: 30px 15px;
+		margin-bottom: 30px;
+	}
+	
+	.hierarchy-header h2 {
+		font-size: 1.5rem;
+	}
+	
+	.hierarchy-subtitle {
+		font-size: 0.95rem;
+	}
+	
+	.hierarchy-container {
+		padding: 0 15px 30px 15px;
+	}
+	
+	.hierarchy-cards {
+		grid-template-columns: 1fr;
+		gap: 15px;
+	}
+	
+	.hierarchy-card {
+		padding: 20px;
+	}
+	
+	.card-icon {
+		font-size: 2.5rem;
+	}
+	
+	.hierarchy-card h4 {
+		font-size: 1.1rem;
+	}
+	
+	.card-role {
+		font-size: 0.75rem;
+	}
+	
+	.card-desc {
+		font-size: 0.9rem;
+	}
+	
+	.expand-responsibilities {
+		padding: 10px 15px;
+		font-size: 0.9rem;
+	}
+	
+	.footer-content {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+}

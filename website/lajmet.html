@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lajmet — Universiteti i Vushtrris</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+</head>
+<body class="bi">
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+			</div>
+			<div class="titull-tekst">
+				<h1>Universiteti i Vushtrris</h1>
+			</div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore">
+			<ul>
+				<li><a href="web1.html">Kryefaqja</a></li>
+				<li><a href="ne.html">Rreth Nesh</a></li>
+				<li><a href="departamentet.html">Departamentet</a></li>
+				<li><a href="hiearkija.html">Hierarkia</a></li>
+				<li><a href="stafi.html">Stafi</a></li>
+				<li><a href="projektet.html">Projektet</a></li>
+				<li><a href="apliko.html">Apliko</a></li>
+				<li><a href="lajmet.html" class="aktual">Lajmet</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="loginpage.html">Kyçu</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="pjesa">
+		<div class="lajme-hero">
+			<h1>Lajmet e Universitetit</h1>
+			<p class="hero-desc">Qëndroni të informuar me lajmet më të fundit, ngjarjet dhe anouncimet</p>
+		</div>
+
+		<div class="lajme-wrapper">
+			<!-- Filter Section -->
+			<div class="lajme-filter">
+				<button class="filter-btn aktiv" data-filter="te-gjitha">Të Gjitha</button>
+				<button class="filter-btn" data-filter="akademik">Akademik</button>
+				<button class="filter-btn" data-filter="ngjarje">Ngjarje</button>
+				<button class="filter-btn" data-filter="njoftimet">Njoftimet</button>
+				<button class="filter-btn" data-filter="arritje">Arritje</button>
+			</div>
+
+			<!-- News Feed -->
+			<div class="lajme-container">
+				<!-- News Item 1 -->
+				<article class="lajme-item" data-category="akademik">
+					<div class="lajme-header">
+						<span class="lajme-tag akademik">Akademik</span>
+						<span class="lajme-date">28 Dhjetor 2025</span>
+					</div>
+					<h2>Hapja e Semestrit të Pranverës 2026</h2>
+					<p class="lajme-excerpt">Semestri i ri do të fillojë më 1 shkurt 2026. Regjistrimet do të mbyllen më 25 janar. Të gjithë studentët duhet t'i përfundojnë rregjistrimet në kohë.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Zëri i Universitetit</span>
+						<span class="lajme-lexime">145 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 2 -->
+				<article class="lajme-item" data-category="ngjarje">
+					<div class="lajme-header">
+						<span class="lajme-tag ngjarje">Ngjarje</span>
+						<span class="lajme-date">25 Dhjetor 2025</span>
+					</div>
+					<h2>Konferenca Ndërkombëtare për Kërkimin Shkencor</h2>
+					<p class="lajme-excerpt">Universiteti ynë do të organizojë konferencën ndërkombëtare për kërkimin shkencor në shkenca kompjuterike. Do të marrin pjesë më shumë se 200 kërkuesit nga 15 vende të ndryshme.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Departamenti i Kërkimit</span>
+						<span class="lajme-lexime">312 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 3 -->
+				<article class="lajme-item" data-category="arritje">
+					<div class="lajme-header">
+						<span class="lajme-tag arritje">Arritje</span>
+						<span class="lajme-date">20 Dhjetor 2025</span>
+					</div>
+					<h2>Studentet Tanë Fituan Medalje në Olimpiadalin e Programimit</h2>
+					<p class="lajme-excerpt">Tre studentë të universitetit tonë kanë fituar medalje në olimpiadalin ndërkombëtar të programimit. Ky është rekord për universitetin. Urime për këtë arritje të jashtëzakonshme!</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Departamenti i Inxhinierisë</span>
+						<span class="lajme-lexime">523 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 4 -->
+				<article class="lajme-item" data-category="akademik">
+					<div class="lajme-header">
+						<span class="lajme-tag akademik">Akademik</span>
+						<span class="lajme-date">18 Dhjetor 2025</span>
+					</div>
+					<h2>Hapja e Programeve të Reja të Doktoraturës</h2>
+					<p class="lajme-excerpt">Universiteti e hapë dy programe të reja të doktoraturës në Bioteknologji dhe Energji të Ripërtëritshme. Pranimet do të fillojnë në janar 2026 me bursë të plota për studentë të zgjuar.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Zëri i Universitetit</span>
+						<span class="lajme-lexime">287 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 5 -->
+				<article class="lajme-item" data-category="njoftimet">
+					<div class="lajme-header">
+						<span class="lajme-tag njoftimet">Njoftim</span>
+						<span class="lajme-date">15 Dhjetor 2025</span>
+					</div>
+					<h2>Ndryshimet në Orarin e Bibliotekës</h2>
+					<p class="lajme-excerpt">Filluar nga 1 janar, biblioteka do të jetë e hapur ditët e punës nga ora 7:00 në mëngjes deri ora 22:00 në mbrëmje. Gjatë fundjavës do të jetë e hapur nga ora 10:00 deri 18:00.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Shërbimi i Bibliotekës</span>
+						<span class="lajme-lexime">156 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 6 -->
+				<article class="lajme-item" data-category="ngjarje">
+					<div class="lajme-header">
+						<span class="lajme-tag ngjarje">Ngjarje</span>
+						<span class="lajme-date">12 Dhjetor 2025</span>
+					</div>
+					<h2>Festa Vjetore e Universitetit</h2>
+					<p class="lajme-excerpt">Festa vjetore e universitetit do të mbahet më 5 janar 2026 në sallën kryesore. Pritet një program me performanca, ushqime tradicionale, dhe shumë surpriza për të gjithë.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Klubi i Studentëve</span>
+						<span class="lajme-lexime">467 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 7 -->
+				<article class="lajme-item" data-category="akademik">
+					<div class="lajme-header">
+						<span class="lajme-tag akademik">Akademik</span>
+						<span class="lajme-date">10 Dhjetor 2025</span>
+					</div>
+					<h2>Aplikimi për Bursa Erasmus+ 2026</h2>
+					<p class="lajme-excerpt">Aplikimi për bursat Erasmus+ për vitin akademik 2026-2027 është përfshirë. Studentët duhet të aplikojnë përmes portalit të universitetit deri më 31 janar 2026.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Zëri i Universitetit</span>
+						<span class="lajme-lexime">234 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+
+				<!-- News Item 8 -->
+				<article class="lajme-item" data-category="arritje">
+					<div class="lajme-header">
+						<span class="lajme-tag arritje">Arritje</span>
+						<span class="lajme-date">8 Dhjetor 2025</span>
+					</div>
+					<h2>Profesori i Universitetit Tonë Mori Çmimin Ndërkombëtar</h2>
+					<p class="lajme-excerpt">Prof. Dr. Avni Hashani mori çmimin ndërkombëtar për kontribut në shkencën e materialeve. Ky çmim njihet si një nga më të rëndësishmet në fushën e tij në botë.</p>
+					<div class="lajme-meta">
+						<span class="lajme-autor">Departamenti i Shkencës</span>
+						<span class="lajme-lexime">389 lexime</span>
+					</div>
+					<a href="#" class="lajme-link">Lexo më shumë →</a>
+				</article>
+			</div>
+
+			<!-- Load More Button -->
+			<div class="lajme-load-more">
+				<button class="btn-load-more">Ngarko më shumë lajme</button>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer-inner">
+			<div class="footer-brand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="footer-logo">
+				<div>
+					<strong>Universiteti i Vushtrris</strong>
+					<div class="footer-slogan">Arsim, Kërkim dhe Zhvillim</div>
+				</div>
+			</div>
+			<div class="footer-links">
+				<h4>Lidhje të shpejta</h4>
+				<ul>
+					<li><a href="ne.html">Rreth Nesh</a></li>
+					<li><a href="departamentet.html">Departamentet</a></li>
+					<li><a href="stafi.html">Stafi</a></li>
+					<li><a href="projektet.html">Projektet</a></li>
+				</ul>
+			</div>
+			<div class="footer-contact">
+				<h4>Kontakt</h4>
+				<p>Email: info@universiteti.com</p>
+				<p>Tel: +383 45 583 000</p>
+				<div class="socials">
+					<a href="#" aria-label="Facebook">f</a>
+					<a href="#" aria-label="Twitter">t</a>
+					<a href="#" aria-label="LinkedIn">in</a>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<h4>Buletini</h4>
+				<form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Faleminderit! (demo)');">
+					<input type="email" placeholder="Emaili juaj" required>
+					<button type="submit">Abonohu</button>
+				</form>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<small>&copy; 2025 Universiteti i Vushtrris — Të gjitha të drejtat e rezervuara.</small>
+			<small>Web: Stafi i IT</small>
+		</div>
+	</footer>
+
+	<script>
+		// Filter functionality
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const newsItems = document.querySelectorAll('.lajme-item');
+
+		filterBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				// Remove active class from all buttons
+				filterBtns.forEach(b => b.classList.remove('aktiv'));
+				// Add active class to clicked button
+				btn.classList.add('aktiv');
+
+				const filterValue = btn.getAttribute('data-filter');
+
+				// Filter news items
+				newsItems.forEach(item => {
+					const category = item.getAttribute('data-category');
+					if (filterValue === 'te-gjitha' || category === filterValue) {
+						item.style.display = 'block';
+						item.style.animation = 'fadeIn 0.3s ease-in';
+					} else {
+						item.style.display = 'none';
+					}
+				});
+			});
+		});
+
+		// Load More functionality
+		const loadMoreBtn = document.querySelector('.btn-load-more');
+		loadMoreBtn.addEventListener('click', () => {
+			alert('Më shumë lajme do të ngarkohen! (Demo mode)');
+		});
+
+		// Add animation for news items
+		const style = document.createElement('style');
+		style.textContent = `
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(10px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+		`;
+		document.head.appendChild(style);
+	</script>
+	<script src="nav.js"></script>
+</body>
+</html>

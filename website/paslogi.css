@@ -1,0 +1,450 @@
+/* Student Portal Styles */
+
+/* Access Blocked Message */
+.access-blocked {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 9999;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.access-blocked.show {
+	display: flex;
+}
+
+.blocked-message {
+	background: #fee;
+	border: 4px solid #c33;
+	border-radius: 12px;
+	padding: 40px;
+	max-width: 500px;
+	text-align: center;
+	box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+	animation: slideInDown 0.5s ease-out;
+}
+
+.blocked-message h2 {
+	color: #c33;
+	margin: 0 0 15px;
+	font-size: 28px;
+}
+
+.blocked-message p {
+	color: #333;
+	margin: 15px 0;
+	font-size: 16px;
+}
+
+.blocked-message a {
+	display: inline-block;
+	margin-top: 20px;
+	padding: 12px 30px;
+	background: #c33;
+	color: white;
+	text-decoration: none;
+	border-radius: 8px;
+	font-weight: 600;
+	transition: all 0.3s ease;
+}
+
+.blocked-message a:hover {
+	background: #a22;
+	transform: translateY(-2px);
+}
+
+/* Portal Wrapper */
+.portal-wrapper {
+	background: linear-gradient(135deg, rgba(11, 99, 183, 0.05) 0%, rgba(6, 58, 115, 0.05) 100%);
+	padding: 40px 20px;
+	min-height: calc(100vh - 400px);
+}
+
+/* Welcome Header */
+.portal-header {
+	max-width: 1200px;
+	margin: 0 auto 40px;
+	background: linear-gradient(135deg, #0b63b7, #063a73);
+	color: white;
+	padding: 30px;
+	border-radius: 12px;
+	box-shadow: 0 10px 30px rgba(11, 99, 183, 0.2);
+}
+
+.portal-header h1 {
+	margin: 0 0 10px;
+	font-size: 32px;
+	font-weight: 600;
+}
+
+.portal-header .user-greeting {
+	opacity: 0.95;
+	margin: 0;
+}
+
+/* Portal Grid */
+.portal-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 25px;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+/* Card Styles */
+.portal-card {
+	background: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	overflow: hidden;
+	transition: all 0.3s ease;
+	animation: slideInUp 0.5s ease-out;
+}
+
+.portal-card:hover {
+	transform: translateY(-5px);
+	box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-header {
+	background: linear-gradient(135deg, #0b63b7, #0f4fb0);
+	color: white;
+	padding: 20px;
+	font-size: 24px;
+	font-weight: 600;
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.card-content {
+	padding: 20px;
+}
+
+.card-content p {
+	margin: 12px 0;
+	color: #333;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+/* Test Schedule */
+.test-item {
+	background: #f5f9ff;
+	padding: 15px;
+	border-radius: 8px;
+	border-left: 4px solid #0b63b7;
+	margin-bottom: 15px;
+	transition: all 0.3s ease;
+}
+
+.test-item:last-child {
+	margin-bottom: 0;
+}
+
+.test-item:hover {
+	background: #eef4ff;
+}
+
+.test-item .test-course {
+	font-weight: 600;
+	color: #063a73;
+	font-size: 15px;
+	margin: 0 0 8px;
+}
+
+.test-item .test-date {
+	color: #0b63b7;
+	font-size: 13px;
+	margin: 4px 0;
+}
+
+.test-item .test-location {
+	color: #666;
+	font-size: 13px;
+	margin: 4px 0;
+}
+
+.test-status {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.status-upcoming {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.status-today {
+	background: #cfe2ff;
+	color: #084298;
+}
+
+.status-completed {
+	background: #d1e7dd;
+	color: #0a3622;
+}
+
+/* Grades */
+.grade-item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 12px 0;
+	border-bottom: 1px solid #eee;
+}
+
+.grade-item:last-child {
+	border-bottom: none;
+}
+
+.grade-course {
+	flex: 1;
+	color: #333;
+	font-weight: 500;
+}
+
+.grade-value {
+	background: linear-gradient(135deg, #0b63b7, #0f4fb0);
+	color: white;
+	padding: 6px 14px;
+	border-radius: 20px;
+	font-weight: 600;
+	font-size: 13px;
+	text-align: center;
+	min-width: 50px;
+}
+
+.grade-value.high {
+	background: linear-gradient(135deg, #28a745, #20c997);
+}
+
+.grade-value.medium {
+	background: linear-gradient(135deg, #ffc107, #fd7e14);
+}
+
+.grade-value.low {
+	background: linear-gradient(135deg, #dc3545, #c82333);
+}
+
+/* Assignments */
+.assignment-item {
+	background: #f8f9fa;
+	padding: 15px;
+	border-radius: 8px;
+	margin-bottom: 15px;
+	border-left: 4px solid #0b63b7;
+	transition: all 0.3s ease;
+}
+
+.assignment-item:last-child {
+	margin-bottom: 0;
+}
+
+.assignment-item:hover {
+	background: #f0f5ff;
+}
+
+.assignment-title {
+	font-weight: 600;
+	color: #063a73;
+	margin: 0 0 8px;
+}
+
+.assignment-due {
+	color: #c33;
+	font-size: 13px;
+	margin: 4px 0;
+	font-weight: 500;
+}
+
+.assignment-status {
+	display: inline-block;
+	padding: 4px 10px;
+	border-radius: 12px;
+	font-size: 11px;
+	font-weight: 600;
+	margin-top: 8px;
+}
+
+.assignment-status.pending {
+	background: #fff3cd;
+	color: #856404;
+}
+
+.assignment-status.submitted {
+	background: #d1e7dd;
+	color: #0a3622;
+}
+
+.assignment-status.overdue {
+	background: #fee;
+	color: #c33;
+}
+
+/* Resources */
+.resource-item {
+	padding: 12px 0;
+	border-bottom: 1px solid #eee;
+	display: flex;
+	align-items: center;
+	gap: 12px;
+}
+
+.resource-item:last-child {
+	border-bottom: none;
+}
+
+.resource-icon {
+	font-size: 20px;
+}
+
+.resource-link {
+	flex: 1;
+	color: #0b63b7;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
+}
+
+.resource-link:hover {
+	color: #063a73;
+	text-decoration: underline;
+}
+
+/* User Info Card */
+.user-info-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 15px;
+	margin-bottom: 30px;
+}
+
+.info-box {
+	background: white;
+	padding: 15px;
+	border-radius: 8px;
+	border-left: 4px solid #0b63b7;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-box label {
+	font-weight: 600;
+	color: #063a73;
+	display: block;
+	font-size: 12px;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+}
+
+.info-box value {
+	color: #333;
+	font-size: 15px;
+	word-break: break-all;
+}
+
+/* Logout Button */
+.logout-section {
+	max-width: 1200px;
+	margin: 40px auto 0;
+	text-align: center;
+}
+
+.logout-btn {
+	background: linear-gradient(135deg, #c33, #a22);
+	color: white;
+	border: none;
+	padding: 12px 30px;
+	border-radius: 8px;
+	font-size: 15px;
+	font-weight: 600;
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+	background: linear-gradient(135deg, #a22, #822);
+	transform: translateY(-2px);
+	box-shadow: 0 8px 20px rgba(195, 51, 51, 0.3);
+}
+
+/* Animations */
+@keyframes slideInUp {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes slideInDown {
+	from {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+	.portal-header {
+		padding: 20px;
+	}
+
+	.portal-header h1 {
+		font-size: 24px;
+	}
+
+	.portal-grid {
+		grid-template-columns: 1fr;
+		gap: 20px;
+	}
+
+	.blocked-message {
+		padding: 30px 20px;
+		max-width: 90%;
+	}
+
+	.blocked-message h2 {
+		font-size: 24px;
+	}
+
+	.user-info-grid {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Role-specific styling */
+.role-professor .card-header {
+	background: linear-gradient(135deg, #5b3c88, #2b2b6b);
+	color: #fff;
+}
+
+.role-professor .portal-header {
+	background: linear-gradient(135deg, #5b3c88, #2b2b6b);
+}
+
+.role-admin .card-header {
+	background: linear-gradient(135deg, #0b63b7, #063a73);
+}
+
+/* Professor panel tweaks */
+#professorPanel .card-content a { color: #5b3c88; text-decoration: none; font-weight: 600; }
+#professorPanel .card-content a:hover { text-decoration: underline; color: #2b2b6b; }
+

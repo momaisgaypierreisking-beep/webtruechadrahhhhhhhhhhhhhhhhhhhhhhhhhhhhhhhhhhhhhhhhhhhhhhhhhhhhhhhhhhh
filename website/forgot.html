@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harrova fjalëkalimin — Universiteti i Vushtrris</title>
+  <link rel="stylesheet" href="style[krejtktu].css">
+  <link rel="stylesheet" href="logincss.css">
+</head>
+<body class="bi">
+  <header class="krye">
+    <div class="identitet">
+      <div class="logo-stand">
+        <img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+      </div>
+      <div class="titull-tekst">
+        <h1>Universiteti i Vushtrris</h1>
+      </div>
+    </div>
+    <nav class="meny" aria-label="Menyja kryesore">
+      <ul>
+        <li><a href="web1.html">Kryefaqja</a></li>
+        <li><a href="ne.html">Rreth Nesh</a></li>
+        <li><a href="departamentet.html">Departamentet</a></li>
+        <li><a href="stafi.html">Stafi</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="pjesa">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="login-logo">🔐</div>
+          <h1>Rivendos fjalëkalimin</h1>
+          <p>Shkruajni emrin e përdoruesit ose emailin dhe do të gjenerojmë një kod rikthimi (për testim lokal).</p>
+        </div>
+
+        <div id="forgotMsg" class="error-message" style="display:none;"></div>
+        <div id="forgotSuccess" class="success-message" style="display:none;"></div>
+
+        <form id="forgotForm" class="login-form">
+          <div class="form-group">
+            <label for="identifier">Emri i përdoruesit ose Email</label>
+            <input id="identifier" name="identifier" placeholder="username ose email" autocomplete="off">
+          </div>
+          <button class="login-button" type="submit">Kërko kodin e rikthimit</button>
+        </form>
+
+        <div class="login-footer" style="margin-top:18px;">
+          <p>Kthehu te <a href="loginpage.html">Kyçja</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    async function findUser(identifier) {
+      try {
+        const r = await fetch('loginbs.json');
+        const data = await r.json();
+        const users = data.users || [];
+        return users.find(u => u.username === identifier || u.email === identifier);
+      } catch (e) {
+        console.error(e);
+        return null;
+      }
+    }
+
+    function generateCode() {
+      return (Math.floor(100000 + Math.random() * 900000)).toString();
+    }
+
+    document.getElementById('forgotForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const id = document.getElementById('identifier').value.trim();
+      const msg = document.getElementById('forgotMsg');
+      const ok = document.getElementById('forgotSuccess');
+      msg.style.display = 'none'; ok.style.display='none';
+
+      if (!id) {
+        msg.textContent = 'Shkruani emrin e përdoruesit ose emailin.';
+        msg.classList.add('show'); msg.style.display='block';
+        return;
+      }
+
+      const user = await findUser(id);
+      if (!user) {
+        msg.textContent = 'Përdoruesi nuk u gjend.';
+        msg.classList.add('show'); msg.style.display='block';
+        return;
+      }
+
+      const code = generateCode();
+      // store reset object in localStorage for demo flow
+      const expires = Date.now() + 1000 * 60 * 15; // 15min
+      localStorage.setItem('pwReset', JSON.stringify({ username: user.username, code, expires }));
+
+      ok.textContent = `Kodi i rikthimit është krijuar (për testim): ${code}. Përdorni lidhjen e mëposhtme për ta rivendosur.`;
+      ok.classList.add('show'); ok.style.display='block';
+
+      // Provide link to reset page
+      const link = document.createElement('a');
+      link.href = `reset.html?u=${encodeURIComponent(user.username)}`;
+      link.textContent = 'Hap faqen e rivendosjes';
+      link.style.display = 'inline-block';
+      link.style.marginTop = '12px';
+      ok.appendChild(document.createElement('br'));
+      ok.appendChild(link);
+    });
+  </script>
+</body>
+</html>

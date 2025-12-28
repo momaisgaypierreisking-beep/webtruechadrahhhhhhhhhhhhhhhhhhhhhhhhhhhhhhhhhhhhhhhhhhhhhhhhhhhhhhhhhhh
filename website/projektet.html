@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Projektet — Universiteti i Vushtrris</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+</head>
+<body class="bi">
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+			</div>
+			<div class="titull-tekst">
+				<h1>Universiteti i Vushtrris</h1>
+			</div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore">
+			<ul>
+				<li><a href="web1.html">Kryefaqja</a></li>
+				<li><a href="ne.html">Rreth Nesh</a></li>
+				<li><a href="departamentet.html">Departamentet</a></li>
+				<li><a href="hiearkija.html">Hierarkia</a></li>
+				<li><a href="stafi.html">Stafi</a></li>
+				<li><a href="projektet.html" class="aktual">Projektet</a></li>
+				<li><a href="apliko.html">Apliko</a></li>
+				<li><a href="lajmet.html">Lajmet</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="loginpage.html">Kyçu</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="pjesa">
+		<div class="projektet-hero">
+			<h1>Projektet Kërkimore</h1>
+			<p class="hero-desc">Zbuloni projektet inovative dhe bashkëpunimet ndërkombëtare të universitetit tonë</p>
+		</div>
+
+		<div class="projektet-wrapper">
+			<!-- Filter Section -->
+			<div class="projektet-filter">
+				<button class="filter-btn aktiv" data-filter="te-gjitha">Të Gjitha</button>
+				<button class="filter-btn" data-filter="shkenca">Shkenca Natyrore</button>
+				<button class="filter-btn" data-filter="teknologji">Teknologji</button>
+				<button class="filter-btn" data-filter="shoqeruese">Shkenca Shoqerore</button>
+				<button class="filter-btn" data-filter="nderkombetare">Ndërkombëtare</button>
+			</div>
+
+			<!-- Projects Grid -->
+			<div class="projektet-grid">
+				<!-- Project 1 -->
+				<div class="projekt-card" data-category="shkenca">
+					<div class="projekt-header">
+						<span class="projekt-tag shkenca">Shkenca Natyrore</span>
+						<span class="projekt-viti">2024-2026</span>
+					</div>
+					<h2>Biodiversiteti i Kosovës: Mbrojtja dhe Konservimi</h2>
+					<p class="projekt-desc">Studim shteruese i varieteve të lëndës bimore dhe kafshëve të rrezikuara në Kosovë me qëllimin e zhvillimit të strategjive të konservimit.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Dr. Shqipe Hoxha</span>
+						<span class="projekt-buxhet">💰 €150,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 8 kërkuesit, 5 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 2 -->
+				<div class="projekt-card" data-category="teknologji">
+					<div class="projekt-header">
+						<span class="projekt-tag teknologji">Teknologji</span>
+						<span class="projekt-viti">2023-2025</span>
+					</div>
+					<h2>AI dhe Machine Learning për Diagnostikimin Mjekësor</h2>
+					<p class="projekt-desc">Zhvillimi i modeleve inteligjente për diagnozimin e sëmundjeve komplekse përmes analizës së imazheve mjekësore.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Prof. Dr. Avni Hasani</span>
+						<span class="projekt-buxhet">💰 €200,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 12 kërkuesit, 3 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 3 -->
+				<div class="projekt-card" data-category="nderkombetare">
+					<div class="projekt-header">
+						<span class="projekt-tag nderkombetare">Ndërkombëtare</span>
+						<span class="projekt-viti">2024-2027</span>
+					</div>
+					<h2>Erasmus+ KA2: Bashkëpunimi në Arsimin e Lartë</h2>
+					<p class="projekt-desc">Partneritet me universitetete të Europës për shkëmbimin e praktikave të mira dhe zhvillimin e programeve akademike të përbashkëta.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Prof. Dr. Lumnije Asllani</span>
+						<span class="projekt-buxhet">💰 €180,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> Universitete nga 8 vende
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 4 -->
+				<div class="projekt-card" data-category="shoqeruese">
+					<div class="projekt-header">
+						<span class="projekt-tag shoqeruese">Shkenca Shoqerore</span>
+						<span class="projekt-viti">2023-2024</span>
+					</div>
+					<h2>Tranzicioni i Komuniteteve Lokale: Zhvillimi i Qëndrueshëm</h2>
+					<p class="projekt-desc">Analizë komprehensive e dinamikës shoqerore në komunitetete të vogla me rekomandime për zhvillimin ekonomik të qëndrueshëm.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Dr. Afrim Beqiri</span>
+						<span class="projekt-buxhet">💰 €95,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 6 kërkuesit, 2 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 5 -->
+				<div class="projekt-card" data-category="teknologji">
+					<div class="projekt-header">
+						<span class="projekt-tag teknologji">Teknologji</span>
+						<span class="projekt-viti">2024-2025</span>
+					</div>
+					<h2>Energjia e Ripërtëritshme: Aplikacione Lokale të Energjisë Diellore</h2>
+					<p class="projekt-desc">Kërkimi dhe zhvillimi i zgjidhjeve inovative për përdorimin e energjisë diellore në industri dhe banesat e rajonit.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Prof. Dr. Nexhat Sylejmani</span>
+						<span class="projekt-buxhet">💰 €160,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 10 kërkuesit, 4 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 6 -->
+				<div class="projekt-card" data-category="shkenca">
+					<div class="projekt-header">
+						<span class="projekt-tag shkenca">Shkenca Natyrore</span>
+						<span class="projekt-viti">2025-2027</span>
+					</div>
+					<h2>Karakteristikat e Ujit të Nëndhesë në Rajonin e Vushtrrit</h2>
+					<p class="projekt-desc">Studim detaluar i cilësisë dhe sasësë të ujit nëndhesë për të informuar politikat e menaxhimit të resurseve ujore.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Dr. Betim Fejzullahu</span>
+						<span class="projekt-buxhet">💰 €120,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 7 kërkuesit, 2 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 7 -->
+				<div class="projekt-card" data-category="nderkombetare">
+					<div class="projekt-header">
+						<span class="projekt-tag nderkombetare">Ndërkombëtare</span>
+						<span class="projekt-viti">2023-2026</span>
+					</div>
+					<h2>Rrjetimi i Instituteve Kërkimore të Ballkanit</h2>
+					<p class="projekt-desc">Koordinimi i bashkëpunimit kërkimor midis instituteve nga 6 vende të Ballkanit me fokus në çështje rajonale.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Prof. Dr. Vedat Daku</span>
+						<span class="projekt-buxhet">💰 €250,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 15 kërkuesit, 6 institucione
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+
+				<!-- Project 8 -->
+				<div class="projekt-card" data-category="shoqeruese">
+					<div class="projekt-header">
+						<span class="projekt-tag shoqeruese">Shkenca Shoqerore</span>
+						<span class="projekt-viti">2024-2025</span>
+					</div>
+					<h2>Kultura Digjitale dhe Identiteti në Epokën e Informacionit</h2>
+					<p class="projekt-desc">Hulumtim etnografik mbi ndikimin e mediave shoqerore dhe teknologjisë digjitale në formimin e identitetit lokal.</p>
+					<div class="projekt-meta">
+						<span class="projekt-drejtues">👤 Dr. Arjeta Krasniqi</span>
+						<span class="projekt-buxhet">💰 €85,000</span>
+					</div>
+					<div class="projekt-team">
+						<strong>Pjesëmarrës:</strong> 5 kërkuesit, 1 institucion
+					</div>
+					<a href="#" class="projekt-link">Mëso më shumë →</a>
+				</div>
+			</div>
+		</div>
+
+		<!-- Statistics Section -->
+		<div class="projektet-stats">
+			<h2>Statistikat e Projekteve</h2>
+			<div class="stats-grid">
+				<div class="stat-item">
+					<div class="stat-number">32</div>
+					<div class="stat-label">Projekte Aktive</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">€2.3M</div>
+					<div class="stat-label">Buxheti Total</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">150+</div>
+					<div class="stat-label">Kërkuesit e Përfshirë</div>
+				</div>
+				<div class="stat-item">
+					<div class="stat-number">28</div>
+					<div class="stat-label">Publikuese Nëndërkombëtare</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer-inner">
+			<div class="footer-brand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="footer-logo">
+				<div>
+					<strong>Universiteti i Vushtrris</strong>
+					<div class="footer-slogan">Arsim, Kërkim dhe Zhvillim</div>
+				</div>
+			</div>
+			<div class="footer-links">
+				<h4>Lidhje të shpejta</h4>
+				<ul>
+					<li><a href="ne.html">Rreth Nesh</a></li>
+					<li><a href="departamentet.html">Departamentet</a></li>
+					<li><a href="stafi.html">Stafi</a></li>
+					<li><a href="lajmet.html">Lajmet</a></li>
+				</ul>
+			</div>
+			<div class="footer-contact">
+				<h4>Kontakt</h4>
+				<p>Email: info@universiteti.com</p>
+				<p>Tel: +383 45 583 000</p>
+				<div class="socials">
+					<a href="#" aria-label="Facebook">f</a>
+					<a href="#" aria-label="Twitter">t</a>
+					<a href="#" aria-label="LinkedIn">in</a>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<h4>Buletini</h4>
+				<form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Faleminderit! (demo)');">
+					<input type="email" placeholder="Emaili juaj" required>
+					<button type="submit">Abonohu</button>
+				</form>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<small>&copy; 2025 Universiteti i Vushtrris — Të gjitha të drejtat e rezervuara.</small>
+			<small>Web: Stafi i IT</small>
+		</div>
+	</footer>
+
+	<script>
+		// Filter functionality for projects
+		const filterBtns = document.querySelectorAll('.filter-btn');
+		const projectCards = document.querySelectorAll('.projekt-card');
+
+		filterBtns.forEach(btn => {
+			btn.addEventListener('click', () => {
+				// Remove active class from all buttons
+				filterBtns.forEach(b => b.classList.remove('aktiv'));
+				// Add active class to clicked button
+				btn.classList.add('aktiv');
+
+				const filterValue = btn.getAttribute('data-filter');
+
+				// Filter project cards
+				projectCards.forEach(card => {
+					const category = card.getAttribute('data-category');
+					if (filterValue === 'te-gjitha' || category === filterValue) {
+						card.style.display = 'block';
+						card.style.animation = 'fadeIn 0.3s ease-in';
+					} else {
+						card.style.display = 'none';
+					}
+				});
+			});
+		});
+
+		// Add animation for project cards
+		const style = document.createElement('style');
+		style.textContent = `
+			@keyframes fadeIn {
+				from { opacity: 0; transform: translateY(10px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+		`;
+		document.head.appendChild(style);
+	</script>
+	<script src="nav.js"></script>
+</body>
+</html>

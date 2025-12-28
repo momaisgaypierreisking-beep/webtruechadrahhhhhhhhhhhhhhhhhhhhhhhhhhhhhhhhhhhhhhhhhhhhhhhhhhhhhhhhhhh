@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="sq">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rivendos fjalëkalimin — Universiteti i Vushtrris</title>
+  <link rel="stylesheet" href="style[krejtktu].css">
+  <link rel="stylesheet" href="logincss.css">
+</head>
+<body class="bi">
+  <header class="krye">
+    <div class="identitet">
+      <div class="logo-stand">
+        <img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+      </div>
+      <div class="titull-tekst">
+        <h1>Universiteti i Vushtrris</h1>
+      </div>
+    </div>
+  </header>
+
+  <main class="pjesa">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="login-logo">🔑</div>
+          <h1>Vendos fjalëkalimin e ri</h1>
+          <p>Futni emrin e përdoruesit, kodin e rikthimit dhe fjalëkalimin e ri.</p>
+        </div>
+
+        <div id="resetMsg" class="error-message" style="display:none;"></div>
+        <div id="resetSuccess" class="success-message" style="display:none;"></div>
+
+        <form id="resetForm" class="login-form">
+          <div class="form-group">
+            <label for="r_user">Emri i përdoruesit</label>
+            <input id="r_user" name="r_user" placeholder="username" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="r_code">Kodi i rikthimit</label>
+            <input id="r_code" name="r_code" placeholder="6-shifror" autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="r_password">Fjalëkalimi i ri</label>
+            <input id="r_password" name="r_password" type="password" placeholder="Fjalëkalimi i ri">
+          </div>
+          <button class="login-button" type="submit">Rivendos fjalëkalimin</button>
+        </form>
+
+        <div class="login-footer" style="margin-top:18px;">
+          <p>Kthehu te <a href="loginpage.html">Kyçja</a></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    // pre-fill username from query
+    const params = new URLSearchParams(window.location.search);
+    const preUser = params.get('u');
+    if (preUser) document.addEventListener('DOMContentLoaded', ()=>{document.getElementById('r_user').value = preUser});
+
+    document.getElementById('resetForm').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      const msg = document.getElementById('resetMsg');
+      const ok = document.getElementById('resetSuccess');
+      msg.style.display='none'; ok.style.display='none';
+
+      const username = document.getElementById('r_user').value.trim();
+      const code = document.getElementById('r_code').value.trim();
+      const newPass = document.getElementById('r_password').value;
+
+      if (!username || !code || !newPass) {
+        msg.textContent = 'Plotësoni të gjitha fushat.'; msg.classList.add('show'); msg.style.display='block'; return;
+      }
+
+      const stored = localStorage.getItem('pwReset');
+      if (!stored) { msg.textContent = 'Nuk ka kërkesë rikthimi.'; msg.classList.add('show'); msg.style.display='block'; return; }
+
+      let obj;
+      try { obj = JSON.parse(stored); } catch(e){ obj=null }
+      if (!obj || obj.username !== username) { msg.textContent = 'Emri i përdoruesit nuk përputhet me kërkesën e rikthimit.'; msg.classList.add('show'); msg.style.display='block'; return; }
+
+      if (Date.now() > obj.expires) { msg.textContent='Kodi ka skaduar.'; msg.classList.add('show'); msg.style.display='block'; return; }
+
+      if (obj.code !== code) { msg.textContent='Kodi i pasaktë.'; msg.classList.add('show'); msg.style.display='block'; return; }
+
+      // Save override in localStorage (userUpdates) so login.js will honor it
+      const updatesRaw = localStorage.getItem('userUpdates');
+      let updates = updatesRaw ? JSON.parse(updatesRaw) : {};
+      updates[username] = { password: newPass, updatedAt: Date.now() };
+      localStorage.setItem('userUpdates', JSON.stringify(updates));
+
+      ok.textContent = 'Fjalëkalimi u rivendos me sukses. Ju lutemi kyçuni me fjalëkalimin e ri.'; ok.classList.add('show'); ok.style.display='block';
+
+      // cleanup pwReset
+      localStorage.removeItem('pwReset');
+
+      setTimeout(()=>{ window.location.href = 'loginpage.html'; }, 1500);
+    });
+  </script>
+</body>
+</html>

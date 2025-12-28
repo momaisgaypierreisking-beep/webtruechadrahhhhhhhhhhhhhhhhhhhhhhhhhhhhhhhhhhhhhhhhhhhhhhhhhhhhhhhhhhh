@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Apliko — Universiteti</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+	<script src="interactive-bg.js"></script>
+</head>
+<body class="bi">
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="" class="logo-placeholder">
+			</div>
+			<div><h1>Universiteti i Vushtrris</h1></div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore"><ul>
+			<li><a href="web1.html">Kryefaqja</a></li>
+			<li><a href="ne.html">Rreth Nesh</a></li>
+			<li><a href="departamentet.html">Departamentet</a></li>
+			<li><a href="hiearkija.html">Hierarkia</a></li>
+			<li><a href="stafi.html">Stafi</a></li>
+			<li><a href="projektet.html">Projektet</a></li>
+			<li><a href="apliko.html">Apliko</a></li>
+			<li><a href="lajmet.html">Lajmet</a></li>
+			<li><a href="kontakt.html">Kontakt</a></li>
+			<li><a href="loginpage.html">Kyçu</a></li>
+		</ul></nav>
+	</header>
+	<main class="pjesa">
+		<h2>Formulari i Aplikimit për Universitet</h2>
+		
+		<div class="noti-mbyllur">
+			<strong>⚠ Aplikimi është Mbyllur</strong>
+			<p>Afatet e aplikimit për periudhën aktuale kanë përfunduar. Ju lutem prini të hapurën e afatit tjetër të aplikimit.</p>
+		</div>
+		
+		<p>Plotësoni formularin më poshtë për të aplikuar në programet tona akademike.</p>
+		
+		<form class="forma-aplikimi" method="POST" action="#" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Informacioni Personal</legend>
+				
+				<div class="fushja">
+					<label for="emri">Emri i Plotë *</label>
+					<input type="text" id="emri" name="emri" required>
+				
+				</div>
+				
+				<div class="fushja">
+					<label for="email">Email *</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="telefon">Numri i Telefonit *</label>
+					<input type="tel" id="telefon" name="telefon" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="lindja">Data e Lindjes *</label>
+					<input type="date" id="lindja" name="lindja" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="gjinia">Gjinia *</label>
+					<select id="gjinia" name="gjinia" required>
+						<option value="mashkull">Mashkull</option>
+						<option value="femer">Femër</option>
+					</select>
+				</div>
+				
+				<div class="fushja">
+					<label for="adresa">Adresa*</label>
+					<input type="text" id="adresa" name="adresa" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="qyteti">Qyteti *</label>
+					<input type="text" id="qyteti" name="qyteti" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="vendi">Vendi i Lindjes *</label>
+					<input type="text" id="vendi" name="vendi" required>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>SHKOLLA E MESME E LART</legend>
+				
+				<div class="fushja">
+					<label for="shkolle">Shkolla e Mesme *</label>
+					<input type="text" id="shkolle" name="shkolle" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="viti-perfundimi">Viti i Përfundimit të Shkollës *</label>
+					<input type="number" id="viti-perfundimi" name="viti-perfundimi" min="1990" max="2025" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="mesatare">Mesatarja e Notave  *</label>
+					<input type="number" id="mesatare" name="mesatare" step="0.01" min="0" max="4" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="programa">Programa e Zgjedhur *</label>
+					<select id="programa" name="programa" required>
+						<option value="">Zgjedhni nje program</option>
+						<option value="informatika">Informatika</option>
+						<option value="iuridiku">Juridiku</option>
+						<option value="Historia">Arkeologjia dhe Historia</option>
+						<option value="ligj">Inxhinjeria</option>
+						<option value="mjekesi">Mjekësia</option>
+						
+					</select>
+				</div>
+				
+				<div class="fushja">
+					<label for="gjuhe">Gjuhet *</label>
+					<input type="text" id="gjuhe" name="gjuhe" placeholder="p.sh. Shqip, Anglisht, Italisht" required>
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Dokumentacioni</legend>
+				
+				<div class="fushja">
+					<label for="diploma">Kopja e Diplomës *</label>
+					<input type="file" id="diploma" name="diploma" accept=".pdf,.doc,.docx,.jpg,.png" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="certifikata">Certifikata e Notave *</label>
+					<input type="file" id="certifikata" name="certifikata" accept=".pdf,.doc,.docx,.jpg,.png" required>
+				</div>
+				
+				<div class="fushja">
+					<label for="motivim">Letra Motivuese (opsionale)</label>
+					<textarea id="motivim" name="motivim" rows="5" placeholder="Shpjegoni pse dëshironi të studioni në universitetin tonë"></textarea>
+				</div>
+				
+				<div class="fushja">
+					<label for="foto">Fotoja e Profilit</label>
+					<input type="file" id="foto" name="foto" accept="image/*">
+				</div>
+			</fieldset>
+			
+			<fieldset>
+				<legend>Informacion Shtesë</legend>
+				
+				<div class="fushja">
+					<label>Keni nevojë për ndihm financiare? *</label>
+					<div class="radio-grupi">
+						<label><input type="radio" name="ndihm" value="po" required> Po</label>
+						<label><input type="radio" name="ndihm" value="jo"> Jo</label>
+					</div>
+				</div>
+				
+				<div class="fushja">
+					<label><input type="checkbox" name="pajtim" required> Pajtohem me kushtet dhe politikat e aplikimit *</label>
+				</div>
+			</fieldset>
+			
+			<div class="buttona">
+				<button type="submit" class="butoni-dergim" disabled>Dërgo Aplikimin</button>
+				<button type="reset" class="butoni-reset">Pastro Formularin</button>
+			</div>
+		</form>
+		
+		<div class="afatime">
+			<h3>Afatime Aplikimi</h3>
+			<ul>
+				<li><strong>Afati i Parë:</strong> 15 Janar - 31 Mars</li>
+				<li><strong>Afati i Dytë:</strong> 1 Prill - 30 Qershor</li>
+				<li><strong>Afati i Tretë:</strong> 1 Shtator - 30 Nëntor</li>
+			</ul>
+		</div>
+	</main>
+	<footer class="site-footer">
+		<div class="site-footer-inner">
+			<div class="footer-brand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="footer-logo">
+				<div>
+					<strong>Universiteti i Vushtrris</strong>
+					<div class="footer-slogan">Arsim, Kërkim dhe Zhvillim</div>
+				</div>
+			</div>
+			<div class="footer-links">
+				<h4>Lidhje të shpejta</h4>
+				<ul>
+					<li><a href="ne.html">Rreth Nesh</a></li>
+					<li><a href="departamentet.html">Departamentet</a></li>
+					<li><a href="stafi.html">Stafi</a></li>
+					<li><a href="lajmet.html">Lajmet</a></li>
+				</ul>
+			</div>
+			<div class="footer-contact">
+				<h4>Kontakt</h4>
+				<p>Email: info@universiteti.com</p>
+				<p>Tel: +383 45 583 000</p>
+				<div class="socials">
+					<a href="#" aria-label="Facebook">f</a>
+					<a href="#" aria-label="Twitter">t</a>
+					<a href="#" aria-label="LinkedIn">in</a>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<h4>Buletini</h4>
+				<form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Faleminderit! (demo)');">
+					<input type="email" placeholder="Emaili juaj" required>
+					<button type="submit">Abonohu</button>
+				</form>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<small>&copy; 2025 Universiteti i Vushtrris — Të gjitha të drejtat e rezervuara.</small>
+			<small>Web: Stafi i IT</small>
+		</div>
+	</footer>
+	<script src="nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="sq">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Stafi — Universiteti i Vushtrris</title>
+	<link rel="stylesheet" href="style[krejtktu].css">
+</head>
+<body class="bi">
+	<header class="krye">
+		<div class="identitet">
+			<div class="logo-stand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="logo-placeholder">
+			</div>
+			<div class="titull-tekst">
+				<h1>Universiteti i Vushtrris</h1>
+			</div>
+		</div>
+		<nav class="meny" aria-label="Menyja kryesore">
+			<ul>
+				<li><a href="web1.html">Kryefaqja</a></li>
+				<li><a href="ne.html">Rreth Nesh</a></li>
+				<li><a href="departamentet.html">Departamentet</a></li>
+				<li><a href="hiearkija.html">Hierarkia</a></li>
+				<li><a href="stafi.html" class="aktual">Stafi</a></li>
+				<li><a href="projektet.html">Projektet</a></li>
+				<li><a href="apliko.html">Apliko</a></li>
+				<li><a href="lajmet.html">Lajmet</a></li>
+				<li><a href="kontakt.html">Kontakt</a></li>
+				<li><a href="loginpage.html">Kyçu</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main class="pjesa">
+		<div class="stafi-hero">
+			<h1>Ekipi Akademik</h1>
+			<p class="hero-desc">Takoni profesorët dhe stafin e dedikuar të universitetit tonë</p>
+		</div>
+
+		<div class="stafi-wrapper">
+			<!-- Search & Filter Section -->
+			<div class="stafi-search-filter">
+				<input type="text" id="searchInput" class="stafi-search" placeholder="🔍 Kërkoni staf sipas emrit ose departamentit...">
+				<div class="stafi-filter">
+					<button class="filter-btn aktiv" data-filter="te-gjitha">Të Gjitha</button>
+					<button class="filter-btn" data-filter="drejtimi">Drejtimi</button>
+					<button class="filter-btn" data-filter="informatike">Informatike</button>
+					<button class="filter-btn" data-filter="shkenca">Shkenca</button>
+					<button class="filter-btn" data-filter="inxhinieri">Inxhinieri</button>
+					<button class="filter-btn" data-filter="administrative">Administrative</button>
+				</div>
+			</div>
+
+			<!-- Staff Grid -->
+			<div class="stafi-grid">
+				<!-- Staff Member 1 -->
+				<div class="stafi-card" data-category="drejtimi" data-search="rektori rektor shqipe hoxha">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👩‍🎓</div>
+						<div class="stafi-badge drejtimi">Rektore</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Prof. Dr. Shqipe Hoxha</h2>
+						<p class="stafi-position">Rektore, Universiteti i Vushtrris</p>
+						<p class="stafi-dept">Drejtim & Zyrë Ekzekutive</p>
+						<div class="stafi-contact">
+							<span>📧 s.hoxha@universiteti.com</span>
+							<span>📞 +383 45 583 001</span>
+						</div>
+						<p class="stafi-bio">Prof. Dr. Hoxha ka 25 vite përvojë në arsimin e lartë dhe menaxhimin akademik. Specialiteti i saj është politika e arsimit dhe zhvillimi institucional.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 2 -->
+				<div class="stafi-card" data-category="drejtimi" data-search="prorektor pro-rektor avni hasani drejtim">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍🎓</div>
+						<div class="stafi-badge drejtimi">Pro-Rektor</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Prof. Dr. Avni Hasani</h2>
+						<p class="stafi-position">Pro-Rektor për Kërkimin & Inovacionin</p>
+						<p class="stafi-dept">Drejtim & Kërkimi</p>
+						<div class="stafi-contact">
+							<span>📧 a.hasani@universiteti.com</span>
+							<span>📞 +383 45 583 002</span>
+						</div>
+						<p class="stafi-bio">Prof. Dr. Hasani është lider në fushën e nanokomputimit dhe materjaleve të avancuara. Ka 35 publikime ndërkombëtare dhe 12 projekte kërkimore aktive.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 3 -->
+				<div class="stafi-card" data-category="informatike" data-search="profesor informatike lumnije asllani">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👩‍💻</div>
+						<div class="stafi-badge informatike">Profesor</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Prof. Dr. Lumnije Asllani</h2>
+						<p class="stafi-position">Profesor i Informatikës</p>
+						<p class="stafi-dept">Departamenti i Informatikës</p>
+						<div class="stafi-contact">
+							<span>📧 l.asllani@universiteti.com</span>
+							<span>📞 +383 45 583 010</span>
+						</div>
+						<p class="stafi-bio">Eksperte në AI dhe machine learning me fokus në zbatimet mjekësore. Drejton laboratorin e kompjuterave paralele të universitetit.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 4 -->
+				<div class="stafi-card" data-category="shkenca" data-search="profesor shkenca afrim beqiri kimia">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍🔬</div>
+						<div class="stafi-badge shkenca">Profesor</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Prof. Dr. Afrim Beqiri</h2>
+						<p class="stafi-position">Profesor i Kimisë</p>
+						<p class="stafi-dept">Departamenti i Shkencave Natyrore</p>
+						<div class="stafi-contact">
+							<span>📧 a.beqiri@universiteti.com</span>
+							<span>📞 +383 45 583 020</span>
+						</div>
+						<p class="stafi-bio">Specialist në kimio-fizikë dhe polimerizim. Ka 28 publikime në revista të klasifikuara dhe 8 patente ndërkombëtare.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 5 -->
+				<div class="stafi-card" data-category="inxhinieri" data-search="profesor inxhinieri nexhat sylejmani energji">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍🔧</div>
+						<div class="stafi-badge inxhinieri">Profesor</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Prof. Dr. Nexhat Sylejmani</h2>
+						<p class="stafi-position">Profesor i Inxhinierisë Elektrike</p>
+						<p class="stafi-dept">Departamenti i Inxhinierisë</p>
+						<div class="stafi-contact">
+							<span>📧 n.sylejmani@universiteti.com</span>
+							<span>📞 +383 45 583 030</span>
+						</div>
+						<p class="stafi-bio">Pioneer në sistemet e energjisë diellore për aplikacione lokale. Drejton qendrën e kërkimit për energjitë e ripërtëritshme.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 6 -->
+				<div class="stafi-card" data-category="informatike" data-search="docent informatike visar morina programim">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍💼</div>
+						<div class="stafi-badge informatike">Docent</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Doc. Dr. Visar Morina</h2>
+						<p class="stafi-position">Docent i Sistemeve Kompjuterike</p>
+						<p class="stafi-dept">Departamenti i Informatikës</p>
+						<div class="stafi-contact">
+							<span>📧 v.morina@universiteti.com</span>
+							<span>📞 +383 45 583 011</span>
+						</div>
+						<p class="stafi-bio">Specialist në arkitekturën e sistemeve dhe cloud computing. Menaxheron infrastrukturën IT të universitetit dhe laboratoret e programimit.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 7 -->
+				<div class="stafi-card" data-category="administrative" data-search="zyrtar administrativ betim fejzullahu">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍💼</div>
+						<div class="stafi-badge administrative">Zyrtar</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Betim Fejzullahu</h2>
+						<p class="stafi-position">Drejtore e Shërbimeve Akademike</p>
+						<p class="stafi-dept">Administrative</p>
+						<div class="stafi-contact">
+							<span>📧 b.fejzullahu@universiteti.com</span>
+							<span>📞 +383 45 583 050</span>
+						</div>
+						<p class="stafi-bio">Menaxhon regjistrimet, vendimet akademike, dhe procedurat e diplomimit. Ka 15 vite përvojë në administrimin e universiteteve.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 8 -->
+				<div class="stafi-card" data-category="shkenca" data-search="asistent fiziologji arjeta krasniqi">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👩‍🔬</div>
+						<div class="stafi-badge shkenca">Asistent</div>
+					</div>
+					<div class="stafi-content">
+						<h2>As. Dr. Arjeta Krasniqi</h2>
+						<p class="stafi-position">Asistent i Biologjisë & Fiziologjisë</p>
+						<p class="stafi-dept">Departamenti i Shkencave Natyrore</p>
+						<div class="stafi-contact">
+							<span>📧 a.krasniqi@universiteti.com</span>
+							<span>📞 +383 45 583 021</span>
+						</div>
+						<p class="stafi-bio">Drejton laboratorin e biologjisë dhe gjenetikës. Kamatje e veçantë në biologjinë e zhvillimit dhe inxhinierinë biomedikale.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 9 -->
+				<div class="stafi-card" data-category="informatike" data-search="lektor informatike vedat daku bazat">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👨‍🏫</div>
+						<div class="stafi-badge informatike">Lektor</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Lek. Vedat Daku</h2>
+						<p class="stafi-position">Lektor i Bazave të Të Dhënave</p>
+						<p class="stafi-dept">Departamenti i Informatikës</p>
+						<div class="stafi-contact">
+							<span>📧 v.daku@universiteti.com</span>
+							<span>📞 +383 45 583 012</span>
+						</div>
+						<p class="stafi-bio">Specialist në sistemet e bazave të të dhënave dhe big data. Drejton klasat praktike dhe laboratoret e bazave të të dhënave.</p>
+					</div>
+				</div>
+
+				<!-- Staff Member 10 -->
+				<div class="stafi-card" data-category="administrative" data-search="bibliotekare adminstrative biblioteka">
+					<div class="stafi-image-wrapper">
+						<div class="stafi-image">👩‍💼</div>
+						<div class="stafi-badge administrative">Bibliotekare</div>
+					</div>
+					<div class="stafi-content">
+						<h2>Selma Ahmetaj</h2>
+						<p class="stafi-position">Drejtore e Bibliotekës Universitare</p>
+						<p class="stafi-dept">Administrative</p>
+						<div class="stafi-contact">
+							<span>📧 s.ahmetaj@universiteti.com</span>
+							<span>📞 +383 45 583 060</span>
+						</div>
+						<p class="stafi-bio">Menaxhon koleksionin e bibliotekës me më shumë se 50,000 tituj. Përgjegjëse për sigurimin e qasjes në baza të dhënash akademike ndërkombëtare.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="site-footer">
+		<div class="site-footer-inner">
+			<div class="footer-brand">
+				<img src="foto/Untitled.jpg" alt="Logo" class="footer-logo">
+				<div>
+					<strong>Universiteti i Vushtrris</strong>
+					<div class="footer-slogan">Arsim, Kërkim dhe Zhvillim</div>
+				</div>
+			</div>
+			<div class="footer-links">
+				<h4>Lidhje të shpejta</h4>
+				<ul>
+					<li><a href="ne.html">Rreth Nesh</a></li>
+					<li><a href="departamentet.html">Departamentet</a></li>
+					<li><a href="projektet.html">Projektet</a></li>
+					<li><a href="lajmet.html">Lajmet</a></li>
+				</ul>
+			</div>
+			<div class="footer-contact">
+				<h4>Kontakt</h4>
+				<p>Email: info@universiteti.com</p>
+				<p>Tel: +383 45 583 000</p>
+				<div class="socials">
+					<a href="#" aria-label="Facebook">f</a>
+					<a href="#" aria-label="Twitter">t</a>
+					<a href="#" aria-label="LinkedIn">in</a>
+				</div>
+			</div>
+			<div class="footer-newsletter">
+				<h4>Buletini</h4>
+				<form class="footer-newsletter-form" onsubmit="event.preventDefault(); alert('Faleminderit! (demo)');">
+					<input type="email" placeholder="Emaili juaj" required>
+					<button type="submit">Abonohu</button>
+				</form>
+			</div>
+		</div>
+		<div class="site-footer-bottom">
+			<small>&copy; 2025 Universiteti i Vushtrris — Të gjitha të drejtat e rezervuara.</small>
+			<small>Web: Stafi i IT</small>
+		</div>
+	</footer>
+
+	<script src="stafi.js"></script>
+	<script src="nav.js"></script>
+</body>
+</html>
